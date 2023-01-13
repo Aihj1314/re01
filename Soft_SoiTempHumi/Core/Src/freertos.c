@@ -47,14 +47,14 @@
 /* USER CODE BEGIN Variables */
 
 /* USER CODE END Variables */
-osThreadId defaultTaskHandle;
+osThreadId UIShowTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 
 /* USER CODE END FunctionPrototypes */
 
-void StartDefaultTask(void const * argument);
+void UI_ShowTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -101,9 +101,9 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  /* definition and creation of UIShowTask */
+  osThreadDef(UIShowTask, UI_ShowTask, osPriorityNormal, 0, 128);
+  UIShowTaskHandle = osThreadCreate(osThread(UIShowTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -111,24 +111,22 @@ void MX_FREERTOS_Init(void) {
 
 }
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header_UI_ShowTask */
 /**
-  * @brief  Function implementing the defaultTask thread.
+  * @brief  Function implementing the UIShowTask thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
+/* USER CODE END Header_UI_ShowTask */
+void UI_ShowTask(void const * argument)
 {
-  /* USER CODE BEGIN StartDefaultTask */
-	printf("¿ªÊ¼\n");
+  /* USER CODE BEGIN UI_ShowTask */
   /* Infinite loop */
   for(;;)
   {
-		printf("this is ok\n");
-    osDelay(1000);
+    osDelay(1);
   }
-  /* USER CODE END StartDefaultTask */
+  /* USER CODE END UI_ShowTask */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -9,6 +9,7 @@
 "soft_soitemphumi\stm32l0xx_it.o"
 "soft_soitemphumi\stm32l0xx_hal_msp.o"
 "soft_soitemphumi\stm32l0xx_hal_timebase_tim.o"
+"soft_soitemphumi\oled.o"
 "soft_soitemphumi\stm32l0xx_hal_adc.o"
 "soft_soitemphumi\stm32l0xx_hal_adc_ex.o"
 "soft_soitemphumi\stm32l0xx_hal.o"
