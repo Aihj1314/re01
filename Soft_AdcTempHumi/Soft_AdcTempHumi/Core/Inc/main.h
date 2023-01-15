@@ -31,7 +31,9 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "FreeRTOS.h"
+#include "task.h"
+#include "cmsis_os.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -53,7 +55,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+extern  SemaphoreHandle_t OLED_bUFFxMutex;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -71,6 +73,8 @@ void Error_Handler(void);
 #define KEY_DOWN_GPIO_Port GPIOB
 #define KEY_UP_Pin GPIO_PIN_15
 #define KEY_UP_GPIO_Port GPIOB
+#define DS18B20_Pin GPIO_PIN_11
+#define DS18B20_GPIO_Port GPIOA
 #define POWER_OLED_Pin GPIO_PIN_3
 #define POWER_OLED_GPIO_Port GPIOB
 #define POWER_5V_Pin GPIO_PIN_4

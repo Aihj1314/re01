@@ -8,7 +8,7 @@ soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l051xx.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Include/core_cm0plus.h
-soft_adctemphumi\adc.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Include/cmsis_version.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@ soft_adctemphumi\adc.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 soft_adctemphumi\adc.o: ../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-soft_adctemphumi\adc.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_exti.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h
@@ -36,3 +36,17 @@ soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h
 soft_adctemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+soft_adctemphumi\adc.o: ../Core/Inc/FreeRTOSConfig.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+soft_adctemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

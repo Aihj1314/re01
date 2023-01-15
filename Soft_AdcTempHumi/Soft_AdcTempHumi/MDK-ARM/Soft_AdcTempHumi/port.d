@@ -1,7 +1,7 @@
 soft_adctemphumi\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/port.c
 soft_adctemphumi\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-soft_adctemphumi\port.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-soft_adctemphumi\port.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 soft_adctemphumi\port.o: ../Core/Inc/FreeRTOSConfig.h
 soft_adctemphumi\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 soft_adctemphumi\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
