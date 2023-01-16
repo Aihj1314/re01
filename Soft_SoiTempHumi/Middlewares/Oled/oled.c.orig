@@ -1,0 +1,30 @@
+/************************************* Copyright(C)****************************** 
+**
+**                 (C) Copyright 2022, @mayuxin,China, GCU.
+**                            All Rights Reserved
+**                     				By( @myx)
+**-------------------------------------------------------------------------------                              
+** @FileName   : oled.c  
+** @Brief	     :  
+**
+**-------------------------------------------------------------------------------	
+** @Author     : @mayuxin	
+** @Version    : v1.0			
+** @Date       : 2023-01-13
+**-------------------------------------------------------------------------------         
+** @Mender	   : Node
+** @Version    : Node
+** @Date       : Node   
+** @Brief      : Node 
+********************************************************************************/
+#include "oled.h"
+#include "i2c.h"
+OLED_StatusTypeDef Oled_Wr_Byte(uint8_t data,Typedef_CmdData cmd)
+{
+	uint8_t TX_DATA = data;
+	if(OLED_CMD)
+        HAL_I2C_Mem_Write(&hi2c1, 0x78, 0x40, I2C_MEMADD_SIZE_8BIT, &TX_DATA, 1, 20);
+    else
+      HAL_I2C_Mem_Write(&hi2c1, 0x78, 0x00, I2C_MEMADD_SIZE_8BIT, &TX_DATA, 1, 20);
+	
+}

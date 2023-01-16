@@ -27,12 +27,15 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "main.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern uint8_t Rs485Buff[9];
+extern uint16_t Rs485Len ;
+extern uint8_t Rs485Rxflag;
+extern uint8_t Rs485Send[8];
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -48,7 +51,10 @@
 /* Exported functions prototypes ---------------------------------------------*/
 void NMI_Handler(void);
 void HardFault_Handler(void);
+void DMA1_Channel1_IRQHandler(void);
+void ADC1_COMP_IRQHandler(void);
 void TIM22_IRQHandler(void);
+void LPUART1_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

@@ -31,12 +31,16 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "FreeRTOS.h"
+#include "task.h"
+#include "cmsis_os.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+extern SemaphoreHandle_t OLED_bUFFxMutex;
+extern float AirTemp;
+extern float AirHumi;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

@@ -49,4 +49,9 @@ soft_soitemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/
 soft_soitemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 soft_soitemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 soft_soitemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+soft_soitemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 soft_soitemphumi\freertos.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+soft_soitemphumi\freertos.o: ../Middlewares/Oled/oled.h
+soft_soitemphumi\freertos.o: ../Core/Inc/adc.h
+soft_soitemphumi\freertos.o: ../Core/Inc/usart.h
+soft_soitemphumi\freertos.o: ../Core/Inc/stm32l0xx_it.h

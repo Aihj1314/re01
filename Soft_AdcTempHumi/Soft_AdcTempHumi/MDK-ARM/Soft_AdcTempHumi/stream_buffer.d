@@ -1,8 +1,8 @@
 soft_adctemphumi\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-soft_adctemphumi\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-soft_adctemphumi\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+soft_adctemphumi\stream_buffer.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\stream_buffer.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 soft_adctemphumi\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-soft_adctemphumi\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\stream_buffer.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 soft_adctemphumi\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
 soft_adctemphumi\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 soft_adctemphumi\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

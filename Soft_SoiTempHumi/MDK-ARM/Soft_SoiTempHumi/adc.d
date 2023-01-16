@@ -36,3 +36,17 @@ soft_soitemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim.h
 soft_soitemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h
 soft_soitemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart.h
 soft_soitemphumi\adc.o: ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_uart_ex.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+soft_soitemphumi\adc.o: ../Core/Inc/FreeRTOSConfig.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+soft_soitemphumi\adc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

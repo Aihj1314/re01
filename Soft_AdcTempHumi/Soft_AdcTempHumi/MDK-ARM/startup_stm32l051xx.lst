@@ -345,11 +345,11 @@ ARM Macro Assembler    Page 6
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=soft_adctemphumi\startup_stm32l051xx.d -osoft_adctemphumi\startup
 _stm32l051xx.o -I..\Core\Inc -I.\RTE\_Soft_AdcTempHumi -ID:\Users\Administrator
-\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include -ID:\Users\Administ
+\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include -ID:\Users\Administ
 rator\AppData\Local\Arm\Packs\Keil\STM32L0xx_DFP\2.2.0\Drivers\CMSIS\Device\ST\
 STM32L0xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
-N SETA 532" --predefine="_RTE_ SETA 1" --predefine="STM32L051xx SETA 1" --prede
-fine="_RTE_ SETA 1" --list=startup_stm32l051xx.lst startup_stm32l051xx.s
+N SETA 527" --predefine="_RTE_ SETA 1" --predefine="STM32L051xx SETA 1" --list=
+startup_stm32l051xx.lst startup_stm32l051xx.s
 
 
 

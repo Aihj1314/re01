@@ -23,10 +23,10 @@
 /* USER CODE BEGIN 0 */
 #include "stdio.h"
 int fputc(int ch, FILE *f)
-{      
-	while((USART1->ISR&0X40)==0){};//循环发送,直到发送完毕   
-    USART1->TDR = (uint8_t) ch;      
-	return ch;
+{
+    while((USART1->ISR&0X40)==0) {}; //循环发送,直到发送完毕
+    USART1->TDR = (uint8_t) ch;
+    return ch;
 }
 /* USER CODE END 0 */
 
@@ -47,7 +47,7 @@ void MX_LPUART1_UART_Init(void)
 
   /* USER CODE END LPUART1_Init 1 */
   hlpuart1.Instance = LPUART1;
-  hlpuart1.Init.BaudRate = 115200;
+  hlpuart1.Init.BaudRate = 9600;
   hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
   hlpuart1.Init.StopBits = UART_STOPBITS_1;
   hlpuart1.Init.Parity = UART_PARITY_NONE;
@@ -151,6 +151,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     GPIO_InitStruct.Alternate = GPIO_AF4_LPUART1;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /* LPUART1 interrupt Init */
+    HAL_NVIC_SetPriority(LPUART1_IRQn, 3, 0);
+    HAL_NVIC_EnableIRQ(LPUART1_IRQn);
   /* USER CODE BEGIN LPUART1_MspInit 1 */
 
   /* USER CODE END LPUART1_MspInit 1 */
@@ -222,6 +225,8 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_10|GPIO_PIN_11);
 
+    /* LPUART1 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(LPUART1_IRQn);
   /* USER CODE BEGIN LPUART1_MspDeInit 1 */
 
   /* USER CODE END LPUART1_MspDeInit 1 */
@@ -265,5 +270,12 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+//void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)//DMA采集完成中断服务函数
+//{
+//	printf("烟雾%d\r\n",ADC_Values[0]);
+//	printf("光电%d\r\n",ADC_Values[1]);
+//	
+//	HAL_ADC_Stop_DMA(&hadc);//关闭DMA的ADC采集
+//}
 
 /* USER CODE END 1 */

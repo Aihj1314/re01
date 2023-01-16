@@ -1,9 +1,9 @@
 soft_adctemphumi\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-soft_adctemphumi\cmsis_os.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+soft_adctemphumi\cmsis_os.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 soft_adctemphumi\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 soft_adctemphumi\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-soft_adctemphumi\cmsis_os.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-soft_adctemphumi\cmsis_os.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\cmsis_os.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\cmsis_os.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 soft_adctemphumi\cmsis_os.o: ../Core/Inc/FreeRTOSConfig.h
 soft_adctemphumi\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 soft_adctemphumi\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

@@ -1,9 +1,9 @@
 soft_adctemphumi\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
-soft_adctemphumi\queue.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-soft_adctemphumi\queue.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+soft_adctemphumi\queue.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+soft_adctemphumi\queue.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 soft_adctemphumi\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-soft_adctemphumi\queue.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-soft_adctemphumi\queue.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\queue.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\queue.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 soft_adctemphumi\queue.o: ../Core/Inc/FreeRTOSConfig.h
 soft_adctemphumi\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 soft_adctemphumi\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

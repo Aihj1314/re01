@@ -1,7 +1,7 @@
 soft_adctemphumi\freertos.o: ../Core/Src/freertos.c
 soft_adctemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-soft_adctemphumi\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-soft_adctemphumi\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\freertos.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\freertos.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 soft_adctemphumi\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 soft_adctemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 soft_adctemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -51,8 +51,8 @@ soft_adctemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/
 soft_adctemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 soft_adctemphumi\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 soft_adctemphumi\freertos.o: ../Middlewares/Adc/voltage_adc.h
-soft_adctemphumi\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+soft_adctemphumi\freertos.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 soft_adctemphumi\freertos.o: ../Middlewares/Oled/oled.h
 soft_adctemphumi\freertos.o: ../Core/Inc/adc.h
-soft_adctemphumi\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+soft_adctemphumi\freertos.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 soft_adctemphumi\freertos.o: ../Middlewares/DS18B20/ds18b20.h

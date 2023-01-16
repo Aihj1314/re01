@@ -50,10 +50,11 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, VDD_ON_Pin|POWER_5V_Pin|POWER_OLED_Pin|POWERKEY_4G_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, VDD_ON_Pin|POWER_OLED_Pin|POWERKEY_4G_Pin|GPIO_PIN_6
+                          |GPIO_PIN_7, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, BEEP_Pin|POWER_4853_3_Pin|RS485RE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, POWER_5V_Pin|BEEP_Pin|POWER_4853_3_Pin|RS485RE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SJON_GPIO_Port, SJON_Pin, GPIO_PIN_RESET);
@@ -65,9 +66,11 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PBPin PBPin PBPin PBPin
-                           PBPin PBPin PBPin */
+                           PBPin PBPin PB6 PB7
+                           PBPin */
   GPIO_InitStruct.Pin = VDD_ON_Pin|POWER_5V_Pin|BEEP_Pin|POWER_OLED_Pin
-                          |POWER_4853_3_Pin|POWERKEY_4G_Pin|RS485RE_Pin;
+                          |POWER_4853_3_Pin|POWERKEY_4G_Pin|GPIO_PIN_6|GPIO_PIN_7
+                          |RS485RE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
