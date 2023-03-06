@@ -85,6 +85,7 @@ void Error_Handler(void);
 #define POWERKEY_4G_GPIO_Port GPIOB
 #define RS485RE_Pin GPIO_PIN_9
 #define RS485RE_GPIO_Port GPIOB
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
