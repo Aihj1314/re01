@@ -40,77 +40,77 @@ TIM_HandleTypeDef        htim22;
   */
 HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
 {
-    RCC_ClkInitTypeDef    clkconfig;
-    uint32_t              uwTimclock;
-    uint32_t              uwAPB2Prescaler;
+  RCC_ClkInitTypeDef    clkconfig;
+  uint32_t              uwTimclock;
+  uint32_t              uwAPB2Prescaler;
 
-    uint32_t              uwPrescalerValue;
-    uint32_t              pFLatency;
-    HAL_StatusTypeDef     status;
-    /*Configure the TIM22 IRQ priority */
-    HAL_NVIC_SetPriority(TIM22_IRQn, TickPriority,0);
+  uint32_t              uwPrescalerValue;
+  uint32_t              pFLatency;
+  HAL_StatusTypeDef     status;
+  /*Configure the TIM22 IRQ priority */
+  HAL_NVIC_SetPriority(TIM22_IRQn, TickPriority ,0);
 
-    /* Enable the TIM22 global Interrupt */
-    HAL_NVIC_EnableIRQ(TIM22_IRQn);
+  /* Enable the TIM22 global Interrupt */
+  HAL_NVIC_EnableIRQ(TIM22_IRQn);
 
-    /* Enable TIM22 clock */
-    __HAL_RCC_TIM22_CLK_ENABLE();
+  /* Enable TIM22 clock */
+  __HAL_RCC_TIM22_CLK_ENABLE();
 
-    /* Get clock configuration */
-    HAL_RCC_GetClockConfig(&clkconfig, &pFLatency);
+  /* Get clock configuration */
+  HAL_RCC_GetClockConfig(&clkconfig, &pFLatency);
 
-    /* Get APB2 prescaler */
-    uwAPB2Prescaler = clkconfig.APB2CLKDivider;
-    /* Compute TIM22 clock */
-    if (uwAPB2Prescaler == RCC_HCLK_DIV1)
-    {
-        uwTimclock = HAL_RCC_GetPCLK2Freq();
-    }
-    else
-    {
-        uwTimclock = 2U * HAL_RCC_GetPCLK2Freq();
-    }
+  /* Get APB2 prescaler */
+  uwAPB2Prescaler = clkconfig.APB2CLKDivider;
+  /* Compute TIM22 clock */
+  if (uwAPB2Prescaler == RCC_HCLK_DIV1)
+  {
     uwTimclock = HAL_RCC_GetPCLK2Freq();
+  }
+  else
+  {
+    uwTimclock = 2U * HAL_RCC_GetPCLK2Freq();
+  }
+  uwTimclock = HAL_RCC_GetPCLK2Freq();
 
-    /* Compute the prescaler value to have TIM22 counter clock equal to 1MHz */
-    uwPrescalerValue = (uint32_t) ((uwTimclock / 1000000U) - 1U);
+  /* Compute the prescaler value to have TIM22 counter clock equal to 1MHz */
+  uwPrescalerValue = (uint32_t) ((uwTimclock / 1000000U) - 1U);
 
-    /* Initialize TIM22 */
-    htim22.Instance = TIM22;
+  /* Initialize TIM22 */
+  htim22.Instance = TIM22;
 
-    /* Initialize TIMx peripheral as follow:
-    + Period = [(TIM22CLK/1000) - 1]. to have a (1/1000) s time base.
-    + Prescaler = (uwTimclock/1000000 - 1) to have a 1MHz counter clock.
-    + ClockDivision = 0
-    + Counter direction = Up
-    */
-    htim22.Init.Period = (1000000U / 1000U) - 1U;
-    htim22.Init.Prescaler = uwPrescalerValue;
-    htim22.Init.ClockDivision = 0;
-    htim22.Init.CounterMode = TIM_COUNTERMODE_UP;
+  /* Initialize TIMx peripheral as follow:
+  + Period = [(TIM22CLK/1000) - 1]. to have a (1/1000) s time base.
+  + Prescaler = (uwTimclock/1000000 - 1) to have a 1MHz counter clock.
+  + ClockDivision = 0
+  + Counter direction = Up
+  */
+  htim22.Init.Period = (1000000U / 1000U) - 1U;
+  htim22.Init.Prescaler = uwPrescalerValue;
+  htim22.Init.ClockDivision = 0;
+  htim22.Init.CounterMode = TIM_COUNTERMODE_UP;
 
-    status = HAL_TIM_Base_Init(&htim22);
+  status = HAL_TIM_Base_Init(&htim22);
+  if (status == HAL_OK)
+  {
+    /* Start the TIM time Base generation in interrupt mode */
+    status = HAL_TIM_Base_Start_IT(&htim22);
     if (status == HAL_OK)
     {
-        /* Start the TIM time Base generation in interrupt mode */
-        status = HAL_TIM_Base_Start_IT(&htim22);
-        if (status == HAL_OK)
-        {
-            if (TickPriority < (1UL << __NVIC_PRIO_BITS))
-            {
-                /* Configure the TIM IRQ priority */
-                HAL_NVIC_SetPriority(TIM22_IRQn, TickPriority, 0U);
-                uwTickPrio = TickPriority;
-            }
-            else
-            {
-                status = HAL_ERROR;
-            }
-        }
+      if (TickPriority < (1UL << __NVIC_PRIO_BITS))
+      {
+        /* Configure the TIM IRQ priority */
+        HAL_NVIC_SetPriority(TIM22_IRQn, TickPriority, 0U);
+        uwTickPrio = TickPriority;
+      }
+      else
+      {
+        status = HAL_ERROR;
+      }
     }
+  }
 
-    /* Return function status */
-    return status;
+ /* Return function status */
+  return status;
 }
 
 /**
@@ -121,8 +121,8 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
   */
 void HAL_SuspendTick(void)
 {
-    /* Disable TIM22 update Interrupt */
-    __HAL_TIM_DISABLE_IT(&htim22, TIM_IT_UPDATE);
+  /* Disable TIM22 update Interrupt */
+  __HAL_TIM_DISABLE_IT(&htim22, TIM_IT_UPDATE);
 }
 
 /**
@@ -133,7 +133,7 @@ void HAL_SuspendTick(void)
   */
 void HAL_ResumeTick(void)
 {
-    /* Enable TIM22 Update interrupt */
-    __HAL_TIM_ENABLE_IT(&htim22, TIM_IT_UPDATE);
+  /* Enable TIM22 Update interrupt */
+  __HAL_TIM_ENABLE_IT(&htim22, TIM_IT_UPDATE);
 }
 

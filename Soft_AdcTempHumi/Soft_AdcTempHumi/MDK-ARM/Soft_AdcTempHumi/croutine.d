@@ -1,7 +1,7 @@
 soft_adctemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 soft_adctemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-soft_adctemphumi\croutine.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-soft_adctemphumi\croutine.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_adctemphumi\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_adctemphumi\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 soft_adctemphumi\croutine.o: ../Core/Inc/FreeRTOSConfig.h
 soft_adctemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 soft_adctemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

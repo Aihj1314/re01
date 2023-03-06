@@ -1,0 +1,14 @@
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+soft_soitemphumi\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+soft_soitemphumi\croutine.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+soft_soitemphumi\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+soft_soitemphumi\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

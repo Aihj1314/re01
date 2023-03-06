@@ -44,8 +44,8 @@ uint8_t Ui_ShowIndex;
 uint8_t Ui_Set_ThereIndex;
 uint8_t Kwh_ThereShold=20;
 uint8_t Ui_OK_OFfLAG;
-float Temp_ThereSholdValue = 38.0;
-float Soi_TherelHumidity = 50.0;
+float Temp_ThereSholdValue = 40.0;
+float Soi_TherelHumidity = 60.0;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -99,43 +99,43 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
   * @retval None
   */
 void MX_FREERTOS_Init(void) {
-    /* USER CODE BEGIN Init */
+  /* USER CODE BEGIN Init */
 
-    /* USER CODE END Init */
+  /* USER CODE END Init */
 
-    /* USER CODE BEGIN RTOS_MUTEX */
+  /* USER CODE BEGIN RTOS_MUTEX */
     OLED_bUFFxMutex = xSemaphoreCreateMutex( );
     /* add mutexes, ... */
-    /* USER CODE END RTOS_MUTEX */
+  /* USER CODE END RTOS_MUTEX */
 
-    /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
     /* add semaphores, ... */
-    /* USER CODE END RTOS_SEMAPHORES */
+  /* USER CODE END RTOS_SEMAPHORES */
 
-    /* USER CODE BEGIN RTOS_TIMERS */
+  /* USER CODE BEGIN RTOS_TIMERS */
     /* start timers, add new ones, ... */
-    /* USER CODE END RTOS_TIMERS */
+  /* USER CODE END RTOS_TIMERS */
 
-    /* USER CODE BEGIN RTOS_QUEUES */
+  /* USER CODE BEGIN RTOS_QUEUES */
     /* add queues, ... */
-    /* USER CODE END RTOS_QUEUES */
+  /* USER CODE END RTOS_QUEUES */
 
-    /* Create the thread(s) */
-    /* definition and creation of OLEDTask */
-    osThreadDef(OLEDTask, Oled_ShowTask, osPriorityBelowNormal, 0, 128);
-    OLEDTaskHandle = osThreadCreate(osThread(OLEDTask), NULL);
+  /* Create the thread(s) */
+  /* definition and creation of OLEDTask */
+  osThreadDef(OLEDTask, Oled_ShowTask, osPriorityBelowNormal, 0, 128);
+  OLEDTaskHandle = osThreadCreate(osThread(OLEDTask), NULL);
 
-    /* definition and creation of AdcTask */
-    osThreadDef(AdcTask, Adc_Task, osPriorityNormal, 0, 128);
-    AdcTaskHandle = osThreadCreate(osThread(AdcTask), NULL);
+  /* definition and creation of AdcTask */
+  osThreadDef(AdcTask, Adc_Task, osPriorityNormal, 0, 128);
+  AdcTaskHandle = osThreadCreate(osThread(AdcTask), NULL);
 
-    /* definition and creation of KeyTask */
-    osThreadDef(KeyTask, Key_Task, osPriorityBelowNormal, 0, 128);
-    KeyTaskHandle = osThreadCreate(osThread(KeyTask), NULL);
+  /* definition and creation of KeyTask */
+  osThreadDef(KeyTask, Key_Task, osPriorityBelowNormal, 0, 128);
+  KeyTaskHandle = osThreadCreate(osThread(KeyTask), NULL);
 
-    /* USER CODE BEGIN RTOS_THREADS */
+  /* USER CODE BEGIN RTOS_THREADS */
     /* add threads, ... */
-    /* USER CODE END RTOS_THREADS */
+  /* USER CODE END RTOS_THREADS */
 
 }
 
@@ -148,7 +148,7 @@ void MX_FREERTOS_Init(void) {
 /* USER CODE END Header_Oled_ShowTask */
 void Oled_ShowTask(void const * argument)
 {
-    /* USER CODE BEGIN Oled_ShowTask */
+  /* USER CODE BEGIN Oled_ShowTask */
     memset(OLED_ShowSprintBuff, '\0', sizeof(OLED_ShowSprintBuff));
     OLED_Init();
 
@@ -189,8 +189,7 @@ void Oled_ShowTask(void const * argument)
             OLED_ShowString(64,40,(const char *)OLED_ShowSprintBuff,16,OLED_SHOW_NOR);
             OLED_Refresh();
         }
-
-        if((Temp_Value>Temp_ThereSholdValue)||(SoilHumidity<Soi_TherelHumidity))
+  if((Temp_Value>Temp_ThereSholdValue)||(SoilHumidity>Soi_TherelHumidity))
         {
 					//printf("Temp_Value = %f SoilHumidity = %f\n",Temp_Value,SoilHumidity);
             HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_SET);
@@ -205,10 +204,11 @@ void Oled_ShowTask(void const * argument)
 					HAL_GPIO_WritePin(GPIOB, VDD_ON_Pin, GPIO_PIN_RESET);
 					osDelay(1000);
         }
+//        
         //osDelay(1000);
 
     }
-    /* USER CODE END Oled_ShowTask */
+  /* USER CODE END Oled_ShowTask */
 }
 
 /* USER CODE BEGIN Header_Adc_Task */
@@ -220,7 +220,7 @@ void Oled_ShowTask(void const * argument)
 /* USER CODE END Header_Adc_Task */
 void Adc_Task(void const * argument)
 {
-    /* USER CODE BEGIN Adc_Task */
+  /* USER CODE BEGIN Adc_Task */
     uint32_t sum = 0;
     uint16_t Adc_Value[2] ;
     short temperature;
@@ -268,7 +268,7 @@ void Adc_Task(void const * argument)
         }
         osDelay(1000);
     }
-    /* USER CODE END Adc_Task */
+  /* USER CODE END Adc_Task */
 }
 
 /* USER CODE BEGIN Header_Key_Task */
@@ -280,7 +280,7 @@ void Adc_Task(void const * argument)
 /* USER CODE END Header_Key_Task */
 void Key_Task(void const * argument)
 {
-    /* USER CODE BEGIN Key_Task */
+  /* USER CODE BEGIN Key_Task */
     uint16_t Timerout;
     osDelay(2000);
     /* Infinite loop */
@@ -393,7 +393,7 @@ void Key_Task(void const * argument)
         }
         //osDelay(10);
     }
-    /* USER CODE END Key_Task */
+  /* USER CODE END Key_Task */
 }
 
 /* Private application code --------------------------------------------------*/

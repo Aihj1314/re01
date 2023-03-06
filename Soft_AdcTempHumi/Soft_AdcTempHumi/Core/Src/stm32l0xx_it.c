@@ -71,14 +71,14 @@ extern TIM_HandleTypeDef htim22;
   */
 void NMI_Handler(void)
 {
-    /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
 
-    /* USER CODE END NonMaskableInt_IRQn 0 */
-    /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+  /* USER CODE END NonMaskableInt_IRQn 0 */
+  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
     while (1)
     {
     }
-    /* USER CODE END NonMaskableInt_IRQn 1 */
+  /* USER CODE END NonMaskableInt_IRQn 1 */
 }
 
 /**
@@ -86,14 +86,14 @@ void NMI_Handler(void)
   */
 void HardFault_Handler(void)
 {
-    /* USER CODE BEGIN HardFault_IRQn 0 */
+  /* USER CODE BEGIN HardFault_IRQn 0 */
 
-    /* USER CODE END HardFault_IRQn 0 */
-    while (1)
-    {
-        /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-        /* USER CODE END W1_HardFault_IRQn 0 */
-    }
+  /* USER CODE END HardFault_IRQn 0 */
+  while (1)
+  {
+    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
+    /* USER CODE END W1_HardFault_IRQn 0 */
+  }
 }
 
 /******************************************************************************/
@@ -108,13 +108,13 @@ void HardFault_Handler(void)
   */
 void DMA1_Channel1_IRQHandler(void)
 {
-    /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
 
-    /* USER CODE END DMA1_Channel1_IRQn 0 */
-    HAL_DMA_IRQHandler(&hdma_adc);
-    /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc);
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
 
-    /* USER CODE END DMA1_Channel1_IRQn 1 */
+  /* USER CODE END DMA1_Channel1_IRQn 1 */
 }
 
 /**
@@ -122,13 +122,13 @@ void DMA1_Channel1_IRQHandler(void)
   */
 void ADC1_COMP_IRQHandler(void)
 {
-    /* USER CODE BEGIN ADC1_COMP_IRQn 0 */
+  /* USER CODE BEGIN ADC1_COMP_IRQn 0 */
 
-    /* USER CODE END ADC1_COMP_IRQn 0 */
-    HAL_ADC_IRQHandler(&hadc);
-    /* USER CODE BEGIN ADC1_COMP_IRQn 1 */
+  /* USER CODE END ADC1_COMP_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc);
+  /* USER CODE BEGIN ADC1_COMP_IRQn 1 */
 
-    /* USER CODE END ADC1_COMP_IRQn 1 */
+  /* USER CODE END ADC1_COMP_IRQn 1 */
 }
 
 /**
@@ -136,13 +136,13 @@ void ADC1_COMP_IRQHandler(void)
   */
 void TIM22_IRQHandler(void)
 {
-    /* USER CODE BEGIN TIM22_IRQn 0 */
+  /* USER CODE BEGIN TIM22_IRQn 0 */
 
-    /* USER CODE END TIM22_IRQn 0 */
-    HAL_TIM_IRQHandler(&htim22);
-    /* USER CODE BEGIN TIM22_IRQn 1 */
+  /* USER CODE END TIM22_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim22);
+  /* USER CODE BEGIN TIM22_IRQn 1 */
 
-    /* USER CODE END TIM22_IRQn 1 */
+  /* USER CODE END TIM22_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
